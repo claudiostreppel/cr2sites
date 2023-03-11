@@ -1,189 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Fonte-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <!--Scrpts bootstrap-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <!--Script fontawensome-->
-    <script src="https://kit.fontawesome.com/15af62b597.js" crossorigin="anonymous"></script>
-    <!--progressbar-->
-    <script src="./src/progressbar.min.js"></script>
-    <!--parallax-->
-    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRSites - Desenvolvimento de sites, e-commerce e sistemas gerenciais</title>
+  <style>
+    /* Estilos gerais */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-    <title>CR2 Sites</title>
+    /* Estilos para o cabeçalho */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Estilos para o conteúdo principal */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilos para as seções */
+    section {
+      margin-bottom: 40px;
+    }
+
+    /* Estilos para os títulos de seção */
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    /* Estilos para os textos de seção */
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* Estilos para as imagens de seção */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Estilos para o rodapé */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Estilos para as mídias sociais */
+    .social-media {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-media a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      color: #333;
+      border-radius: 50%;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .social-media a:hover {
+      transform: scale(1.2);
+    }
+
+    .social-media a:last-of-type {
+      margin-right: 0;
+    }
+  </style>
 </head>
-
 <body>
-    <!--Começa a NAVBAR-->
-    <header>
-        <div class="container" id="nav-container">
-            <nav class="navbar navbar-expand-lg fixed-top">
-                <a href="#" class="navbar-brand">
-                    <img src="./img/hdcagency_logo.svg" alt="crSites" id="logo"> CR2 Sites
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
-                    aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                    <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link" id="home-menu">Home</a>
-                        <a href="#sobre" class="nav-item nav-link" id="about-menu">A agência</a>
-                        <a href="#" class="nav-item nav-link" id="services-menu">Serviços</a>
-                        <a href="#" class="nav-item nav-link" id="team-menu">Time</a>
-                        <a href="#" class="nav-item nav-link" id="portfolio-menu">Projetos</a>
-                        <a href="#" class="nav-item nav-link" id="home-menu">Contato</a>
-                    </div>
-                </div>
-            </nav>
 
-        </div>
-    </header>
-    <!--Termina a NAVBAR-->
-    <main>
-        <!-- Incio dos slides-->
-        <div class="container-fluid">
-            <div id="mainSlider" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
-                    <li data-target="#mainSlider" data-slide-to="1"></li>
-                    <li data-target="#mainSlider" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./img/banner1.png" alt="Projetos de E-Commerce" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2>Quer criar um e-commerce ?</h2>
-                            <p>Conte conosco, estamos preparados para surpreende-lo !</p>
-                            <a href="#" class="main-btn">Ver portfólio</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/banner2.png" alt="Engenharia de Software" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2>Quer melhorar o controle do seu negocio ?</h2>
-                            <p>Conte conosco, estamos preparados para surpreende-lo !</p>
-                            <a href="#" class="main-btn">Ver portfólio</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/banner3.png" alt="Manutenção de software" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2>Esta buscando manutenção em seu site ou software ?</h2>
-                            <p>Conte conosco, estamos preparados para surpreende-lo !</p>
-                            <a href="#" class="main-btn">Ver portfólio</a>
-                        </div>
-                    </div>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>CRSites</h1>
+    <h2>Desenvolvimento de Sites, E-commerce e Sistemas Gerenciais para Pequenas Empresas e Prestadores de Serviços</h2>
+  </header>
 
+  <!-- Conteúdo principal -->
+  <main>
 
-                </div>
-                <!--Insere as setinhas para ir para o proximo ou voltar um slide-->
-                <a href="#mainSlider" class="carousel-control-prev" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">previus</span>
-                </a>
-                <a href="#mainSlider" class="carousel-control-next" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <!-- inicio da area sobre a empresa-->
-            <div id="about-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3 class="main-title" name="sobre">Sobre a CR2 SITES</h3>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="./img/agencia.jpg" alt="Agenca CR2" class="img-fluid">
-                        </div>
-                        <div class="col-md-6">
-                            <h3 class="about-title">Uma Agencia que pensa no futuro.</h3>
-                            <p>Nossos projetos são adaptados ao cliente e seu propósito.</p>
-                            <p>Após a especificação do projetos os arquitetos de software definirão as melhores
-                                tecnologias para seu projeto.</p>
-                            <p>E nossos designers trabalharão na sua interface/layout para impulsionar o negócio.</p>
-                            <p>Veja outros diferenciais:</p>
-                            <ul id="about-list">
-                                <li><i class="fas fa-check"></i> Utilização de Machine Learning / AI</li>
-                                <li><i class="fas fa-check"></i> Layout responsivo para todos os dispositivos</li>
-                                <li><i class="fas fa-check"></i> Integração com diversos sistemas do mercado</li>
-                                <li><i class="fas fa-check"></i> Sistema de pagamento próprio</li>
-                                <li><i class="fas fa-check"></i> Desenvolvimento com metodologia ágil</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- inicio dos serviços da empresa-->
-            <div id="services-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3 class="main-title">Nossas Especialidades</h3>
-                        </div>
-                        <div class="col-md-4 service-box">
-                            <i class="fas fa-mobile-alt"></i>
-                            <h4>Aplicativos Nativos</h4>
-                            <p>Utilizamos o real poder dos dispositivos móveis construindo aplicativos nativos.</p>
-                        </div>
-                        <div class="col-md-4 service-box">
-                            <i class="fas fa-shopping-cart"></i>
-                            <h4>E-commerces</h4>
-                            <p>Temos uma plataforma própria de e-commerce que se adapta a qualquer regra de negocio B2C
-                                e B2B.</p>
-                        </div>
-                        <div class="col-md-4 service-box">
-                            <i class="fas fa-paint-brush"></i>
-                            <h4>Design Criativo</h4>
-                            <p>Nosso designer é especializado em UI/UX e esta pronto para superar suas expectativas</p>
-                        </div>
-                        <div class="col-md-4 service-box">
-                            <i class="fab fa-google"></i>
-                            <h4>Experts em SEO</h4>
-                            <p>Com nosso serviço de marketing seu site será melhor posicionado no Google e venderá mais.
-                            </p>
-                        </div>
-                        <div class="col-md-4 service-box">
-                            <i class="fas fa-hands-helping"></i>
-                            <h4>Suporte 24/7</h4>
-                            <p>Sempre terá alguém disponivel para dar o suporte que você merece.</p>
-                        </div>
-                        <div class="col-md-4 service-box">
-                            <i class="fas fa-server"></i>
-                            <h4>Experiencia em servidores</h4>
-                            <p> Segurança, Fácil acesso e rapidez no tempo de resposta do seu site.</p>
-                        </div>
+    <section>
+      <h2>Quem somos</h2>
+<!--<p>A CRSites é uma empresa especializada em desenvolvimento de sites, e-commerce e sistemas gerenciais para pequenas empresas e 
+        prestadores de serviços. Nós trabalhamos para fornecer soluções personalizadas e eficazes, atendendo às necessidades específicas 
+        de cada cliente.</p> 
+        <p>Na CRSites, nosso compromisso é oferecer soluções personalizadas que atendam às necessidades do seu negócio. Acreditamos que o preço justo é importante e nos esforçamos para garantir que nossos serviços sejam acessíveis a todos os nossos clientes. Além disso, estamos sempre em busca do melhor para você, utilizando as tecnologias mais avançadas e as práticas mais eficazes para garantir que seu negócio obtenha os melhores resultados possíveis.</p>-->
+        <p>
+            Na CRSites, nosso compromisso é oferecer soluções personalizadas que atendam às necessidades do seu negócio. Estamos sempre em busca do melhor para que você possa administrar com tranquilidade, utilizando as tecnologias mais avançadas e as práticas mais eficazes para garantir que sua empresa obtenha os melhores resultados possíveis.
+        </p>
+      <img src="https://via.placeholder.com/800x400" alt="Imagem de quem somos">
+    </section>
 
+    <section>
+      <h2>O que fazemos</h2>
+      <p>Desenvolvemos sites e e-commerce profissionais e personalizados, além de sistemas gerenciais para controle de vendas, estoque 
+        e finanças. Nossas aplicações visam facilitar os processos do seu negocio, seja ele prestação de serviços, loja on-line, comercio, atelier, industria de pequeno/médio porte </p>
+    </section>
 
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section>
+        <h2>Objetivo</h2>
+        <p>Na CRSites, colocamos seu negócio em primeiro lugar e por isso, criamos soluções personalizadas para atender às suas necessidades
+           específicas. Nosso sistema é projetado do zero para atender exclusivamente as necessidades do seu negócio, garantindo eficiência 
+           eficácia em todas as suas funcionalidades.
+    </section>
 
-        -->
-    </main>
-
-    <script src="/src/script.js"></script>
+    <section>
+        <h2>Não perca mais tempo</h2>
+        <p>Não deixe seu negócio ficar para trás na era digital. Na CRSites, oferecemos soluções personalizadas que atendem às necessidades específicas do seu negócio, garantindo eficiência e eficácia em todas as suas funcionalidades. Com preços justos e o compromisso de oferecer o melhor para você, estamos prontos para ajudá-lo a alcançar o sucesso online. Não perca mais tempo, entre em contato conosco agora e comece a transformação digital do seu negócio hoje mesmo.</p>
+    </section>
+</main>
 </body>
-
 </html>
+
