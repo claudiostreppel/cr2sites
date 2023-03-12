@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Estilos para o cabeçalho */
+  header {
+    background-color: #333;
+    /*color: #fff;*/
+    color:  #F5F5DC;
+
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Estilos para o conteúdo principal */
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Estilos para as seções */
+  section {
+    margin-bottom: 40px;
+  }
+
+  /* Estilos para os títulos de seção */
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  /* Estilos para os textos de seção */
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  input:focus {
+    animation: roll-in 1s ease-in-out;
+  }
+  @keyframes roll-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+
+  /* Estilos para as imagens de seção */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Estilos para o rodapé */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Estilos para as mídias sociais */
+  .social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .social-media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .social-media a:hover {
+    transform: scale(1.2);
+  }
+
+  .social-media a:last-of-type {
+    margin-right: 0;
+  }
